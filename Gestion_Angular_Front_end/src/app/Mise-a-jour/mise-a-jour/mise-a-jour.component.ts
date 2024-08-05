@@ -14,8 +14,8 @@ import { Mise_a_jourDto } from './mise_a_jour-dto';
   styleUrls: ['./mise-a-jour.component.css']
 })
 export class MiseAJourComponent implements OnInit {
-  miseajours: MiseajourDto[] = [];
-  miseajourDto: MiseajourDto = new MiseajourDto();
+  //miseajours: MiseajourDto[] = [];
+  //miseajourDto: MiseajourDto = new MiseajourDto();
 
 
   mise_a_jours: Mise_a_jourDto[]=[];
@@ -29,9 +29,7 @@ export class MiseAJourComponent implements OnInit {
 
     ngOnInit(): void {
 
-      //this.getMiseajours();
-      //this.getMiseajoursConsole() ;
-   //   this.getMise_a_jours();
+// this.getMise_a_joursConsole
       this.getMise_a_joursConsole() ;
 
     }
@@ -43,6 +41,7 @@ export class MiseAJourComponent implements OnInit {
     this.mise_a_jourDto.etat='';
       this.mise_a_jourService.getMise_a_jours()
         .subscribe(data => {
+          console.log("LE DATA EST");
           console.log(data);
           this.mise_a_jours = data; // Store the data in the 'miseajours' property
           this.mise_a_jourDto.etat += `Toutes les miseajours: ${JSON.stringify(data)}\n`; // Append the formatted output to the variable
@@ -54,29 +53,6 @@ export class MiseAJourComponent implements OnInit {
 
 
 
-
-
-
-
-// this.miseajourDto.etat='';
-//       this.miseajourService.getMiseajours()
-//         .subscribe(data => {
-//           console.log(data);
-//           this.miseajours = data; // Store the data in the 'miseajours' property
-//           this.miseajourDto.etat += `Toutes les miseajours: ${JSON.stringify(data)}\n`; // Append the formatted output to the variable
-//         });
-
-//       return this.miseajourDto.etat; // Return the accumulated output after the subscription completes
-//     }
-
-//     checkWordInString(word: string, string: string) {
-//       const lowercaseWord = word.toLowerCase();
-//       const lowercaseString = string.toLowerCase();
-//       return lowercaseString.includes(lowercaseWord);
-//     }
-
-
-
  checkWordInString(word: string, string: string): boolean {
       const lowercaseWord = word.toLowerCase();
       const lowercaseString = string.toLowerCase();
@@ -84,24 +60,26 @@ export class MiseAJourComponent implements OnInit {
     }
 
     onSubmit() {
-      console.log(this.miseajourDto);  //change
+      console.log(this.mise_a_jourDto);  //change
       try {
         // ... (Existing code for calling getMiseajours and handling errors)
 
-        if (this.miseajourDto) { // Assuming miseajourDto is checked for validity elsewhere
-          const wordToCheck = "SCP: 0" ||"different";
-          const result = this.checkWordInString(wordToCheck, this.miseajourDto.etat);
-          this.miseajourDto.result = result; // Update the component's result property
+        if (this.mise_a_jourDto) { // Assuming miseajourDto is checked for validity elsewhere
+          const wordToCheck = "Remplacement" ||"différents";
+          const result = this.checkWordInString(wordToCheck, this.mise_a_jourDto.etat);
+          this.mise_a_jourDto.result = result; // Update the component's result property
 
           if (result) {
-            console.log('"mise a jour disponible" is present in the miseajourDto text.');
+            alert("une mise à jour est disponible");
+            console.log('"mise a jour disponible".');
            // this.router.navigate(['/progressbar']);
             // Optionally, display a message on the HTML page using your framework's methods (e.g., Angular template binding)
           } else {
-            console.log('"Vous ete deja a jour" is not present in the miseajourDto text.');
+            alert("Vous êtes deja à jour");
+            console.log('"Vous ete deja a jour" ');
           }
         } else {
-          console.error("Error fetching miseajours or invalid type:", this.miseajourDto);
+          console.error("Error fetching miseajours or invalid type:", this.mise_a_jourDto);
         }
       } catch (error) {
         console.error("Error fetching miseajours:", error);
@@ -111,27 +89,13 @@ export class MiseAJourComponent implements OnInit {
     }
 
 
+  }
 
 
 
-    //  onSubmit() {
-    //   try {
-    //     // 1. Call getMiseajours (assuming it's asynchronous)
-    //     this.miseajourDto.etat =  this. getMiseajoursConsole(); // Wait for the promise
-    //     this.checkWordInString("ahead","pull");
-    //     // 2. Check for "jour" in miseajourDto.etat (assuming it's a string now)
-    //     if (this.miseajourDto.etat && typeof this.miseajourDto.etat === 'string') {
-    //      console.log("execution deif");
-    //     } else {
-    //       console.error("Error fetching miseajours or invalid type:", this.miseajourDto.etat);
-    //     }
-    //   } catch (error) {
-    //     console.error("Error fetching miseajours:", error);
-    //     // Handle the error (e.g., display an error message to the user)
-    //   }
-    // }
 
-    }
+
+
 
 
 

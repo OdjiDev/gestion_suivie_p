@@ -12,12 +12,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./page-login.component.css']
 })
 export class PageLoginComponent implements OnInit {
-  // usersDto: UsersDto[] = [];
-  // user: Users = {
-  //   userId: '', password: '',
-  //   repeatpassord: '',
-  //   role: ''
-  // };
 
 
   constructor(private loginuserService: LoginuserService, private router: Router) {}

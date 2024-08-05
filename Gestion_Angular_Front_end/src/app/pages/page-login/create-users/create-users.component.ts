@@ -14,7 +14,7 @@ export class CreateUsersComponent implements OnInit {
   user: User = {
     userId: "", password: "",
     repeatPassord: "",
-    user_role: ""
+    User_role: ""
   };
 
   constructor(private loginuserService: LoginuserService, private router: Router){}

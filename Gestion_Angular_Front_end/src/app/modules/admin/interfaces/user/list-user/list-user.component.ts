@@ -76,7 +76,7 @@ filterByChanged() {
   if (this.filterBy == 'nom') {
     this.datas.sort((a, b) => a.userId.localeCompare(b.userId));
   } else if (this.filterBy == '') {
-    this.datas.sort((a, b) => a.user_role.localeCompare(b.user_role));
+    this.datas.sort((a, b) => a.User_role.localeCompare(b.User_role));
   }
 
   this.totalItems = this.datas.length;
@@ -90,7 +90,7 @@ async filterUserLists() {
     if (this.searchText) {
       this.datas = await this.users.filter(user => {
         return user.userId.toLowerCase().includes(this.searchText.toLowerCase())
-          || user.user_role.toLowerCase().includes(this.searchText.toLowerCase());
+          || user.User_role.toLowerCase().includes(this.searchText.toLowerCase());
       });
     } else {
       this.datas = this.users;

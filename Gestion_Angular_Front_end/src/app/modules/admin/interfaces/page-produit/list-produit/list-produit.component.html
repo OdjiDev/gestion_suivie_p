@@ -1,5 +1,5 @@
 <!-- show message in alert -->
-test
+
 <div class="col-12 text-center">
   <h5 [class]="style" role="alert" *ngIf="message">
     {{ message }}
@@ -63,9 +63,9 @@ test
         <th>Nom produit</th>
         <th>Prix d'achat</th>
         <th>Quantite</th>
-      <!--    <th>Taux TTC</th>
-              <th>Taux HT</th>     -->
-        <!-- ... Ajoutez d'autres colonnes ici ... -->
+       <!--  <th>Taux TTC</th>
+              <th>Taux HT</th>     
+        <!-- ... Ajoutez d'autres colonnes ici ...   		  <!-- -->
         <th>Actions</th>
       </tr>
     </thead>
@@ -78,8 +78,8 @@ test
         <td>{{ produit.nom }}</td>
         <td>{{ produit.prixAchat }}</td>
      	  <td>{{ produit.quantite }}</td>		 	
-        <!--       <td>{{ produit.quantite* produit.prixAchat+0.20* produit.prixAchat }}</td>
-             <td>{{ produit.quantite* produit.prixAchat }}</td>     -->
+   <!--            <td>{{ produit.quantite* produit.prixAchat+0.20* produit.prixAchat }}</td>
+             <td>{{ produit.quantite* produit.prixAchat }}</td>       <!-- 	 -->
         <!-- <td>{{ produit.enseignantDto.motif }} {{produit.enseignantDto.premotif}}</td> -->
         <!-- ... Affichez d'autres données de la produit ... -->
         <td>

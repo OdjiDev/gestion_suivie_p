@@ -29,7 +29,7 @@
       <div class="form-row">
         <div class="col-md-4 mb-3"></div>
         <label>Role</label>
-        <input type="text" class="form-control" placeholder="Adresse" [(ngModel)]="user.user_role" name="adresse"
+        <input type="text" class="form-control" placeholder="Adresse" [(ngModel)]="user.User_role" name="adresse"
           required minlength="3" maxlength="30" #adresseVar="ngModel"
           [ngClass]="{'is-invalid': adresseVar.touched && !adresseVar.valid}" />
 
@@ -45,7 +45,7 @@
           </span>
         </div>
       </div>
-      
+
 
 
       <div class="text-right">

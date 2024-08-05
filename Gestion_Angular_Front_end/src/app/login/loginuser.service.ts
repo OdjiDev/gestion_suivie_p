@@ -39,16 +39,11 @@ export class LoginuserService {
 }
 
 
-//   updateUser(id: number, user: User): Observable<Object>{
-//     return this.httpClient.put<Object>(`${this.baseURL}/${id}`, User);
-//   }
-
-//   deleteUser(id: number): Observable<Object>{
-//     return this.httpClient.delete<Object>(`${this.baseURL}/${id}`);
-//   }
 
 
-// }
+
+
+
 
 
 

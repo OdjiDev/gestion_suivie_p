@@ -47,9 +47,9 @@ cd "$(dirname "$0")"
 # Print the current directory to be captured by Java 
  cd ..
 # Change to the specific directory
-cd Gestion_Angular_Front_end/src/app/modules/admin/interfaces/page-produit/list-produit/
-#  cd Gestion_Angular_Front_end/src/app/modules/admin/components/side-bar
-# cd Gestion_Angular_Front_end/src/app/modules/admin
+  cd Gestion_Angular_Front_end/src/app/modules/admin/interfaces/page-produit/list-produit/
+#   cd Gestion_Angular_Front_end/src/app/modules/admin/components/side-bar
+# cd Gestion_Angular_Front_end/src/app/modules/
 # cd Gestion_Angular_Front_end/src/app/modules/comptable
 # cd Gestion_Angular_Front_end/src/app/modules/personnel
 
@@ -60,10 +60,11 @@ path=$(pwd)
 echo "Début du script mise_a_jour.sh\n"
  LOCAL_DIR=$path
 # REMOTE_DIR="/z/logiciel_MAJ/"
-REMOTE_DIR="/home/versioning/depot_logiciel/gestion_Ressources_MAJ/Gestion_Angular_Front_end/src/app/modules/admin/interfaces/page-produit/list-produit"
-#  REMOTE_DIR="/home/serveurMaj/versioning/gestion_Ressources_MAJ/Gestion_Angular_Front_end/src/app/modules/admin/interfaces/page-produit/list-produit"
-SERVER="192.168.60.141"
+ REMOTE_DIR="/home/versioning/depot_logiciel/gestion_Ressources_MAJ/Gestion_Angular_Front_end/src/app/modules/admin/interfaces/page-produit/list-produit"
+# REMOTE_DIR="/home/serveurMaj/versioning/gestion_Ressources_MAJ/Gestion_Angular_Front_end/src/app/modules/"
+# REMOTE_DIR="/home/versioning/depot_logiciel/gestion_Ressources_MAJ/Gestion_Angular_Front_end/src/app/modules/admin/components/side-bar"
 USERNAME="serveurMaj"
+SERVER="192.168.60.141"
 
 
 # Print the variable 'path' to be captured by Java
@@ -127,3 +128,11 @@ process_directory() {
  process_directory $LOCAL_DIR $REMOTE_DIR
 
 echo "fin du script mise_a_jour.sh OK "
+
+cd "$(dirname "$0")"
+
+cd ..
+
+# Print the variable 'path' to be captured by Java
+echo "le path est : ================================path="
+echo "path=$path"

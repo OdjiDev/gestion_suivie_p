@@ -6,7 +6,7 @@
   <div class="card-header text-white bg-info d-flex justify-content-between">
 <div class="card">
   <div class="card-header text-white bg-info">
-    Bienvenue dans la gestion de la mise
+    Bienvenue dans la gestion de la mise à jour
 
   </div>
 
@@ -17,11 +17,12 @@
          <div class="form-row">
 
             <div *ngIf="mise_a_jourDto.result">
-              <h2>Mise a jour disponible</h2>
+              <h2>En cours de mise à jour</h2>
               <app-progress-bar></app-progress-bar>
             </div>
             <div *ngIf="!mise_a_jourDto.result">
               <h2>Cliquez pour verifier.</h2>
+              <app-progress-bar></app-progress-bar>
             </div>
 
 

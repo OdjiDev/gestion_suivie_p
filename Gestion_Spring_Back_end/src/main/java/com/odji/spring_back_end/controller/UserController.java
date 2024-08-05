@@ -33,7 +33,8 @@ public class UserController {
     public ResponseEntity<?> loginUser(@RequestBody User usersData){
         System.out.println(usersData);
         User users=userRepository.findByUserId(usersData.getUserId());
-        if(users.getPassword().equals(usersData.getPassword())) { if(users.getUser_role().equals(usersData.getUser_role()) )
+        if(users.getPassword().equals(usersData.getPassword())) {
+//            if(users.getUser_role().equals(usersData.getUser_role()) )
 //
             return ResponseEntity.ok(users);}
         return (ResponseEntity<?>)ResponseEntity.internalServerError();
