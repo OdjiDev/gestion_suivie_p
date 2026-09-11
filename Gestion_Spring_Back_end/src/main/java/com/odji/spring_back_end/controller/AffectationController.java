@@ -10,14 +10,15 @@ import com.odji.spring_back_end.model.Affectation;
 import com.odji.spring_back_end.repository.*;
 import com.odji.spring_back_end.repository.AffectationRepository;
 import com.odji.spring_back_end.services.AffectationService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import lombok.RequiredArgsConstructor;
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/api")
